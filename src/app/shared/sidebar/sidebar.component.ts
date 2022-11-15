@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { GifsService } from 'src/app/services/gifs.service';
 
 @Component({
@@ -15,5 +15,12 @@ export class SidebarComponent implements OnInit {
 
   get getHistorial(){
     return this.gifService.getHistorial;
+  }
+
+  //@ViewChild('itemHistorial') itemHistorial!: ElementRef<HTMLInputElement>;
+
+  buscarTerminoHistorial( itemHistorial:string ){
+    console.log("Value: ", itemHistorial);
+    this.gifService.buscarGifs(itemHistorial);
   }
 }

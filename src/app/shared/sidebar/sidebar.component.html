@@ -21,7 +21,7 @@
               Últimas busquedas
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li *ngFor="let item of getHistorial"><a class="dropdown-item" href="#">{{ item | titlecase }}</a></li>
+              <li *ngFor="let item of getHistorial"  ><a class="dropdown-item" (click)="buscarTerminoHistorial( item )" #itemHistorial href="#">{{ item | titlecase }}</a></li>
               <li *ngIf="getHistorial.length == 0"><a class="dropdown-item">Sin historial</a></li>
             </ul>
           </li>

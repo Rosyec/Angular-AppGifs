@@ -16,5 +16,5 @@ export class ResultadosComponent implements OnInit {
   get getResultados(){
     return this.gifService.resultados;
   }
-
+  
 }
