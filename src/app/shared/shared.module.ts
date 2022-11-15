@@ -6,6 +6,7 @@ import { GifsModule } from '../gifs/gifs.module';
 
 
 
+
 @NgModule({
   declarations: [
     SidebarComponent,
