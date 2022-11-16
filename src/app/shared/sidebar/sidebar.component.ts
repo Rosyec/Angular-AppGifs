@@ -17,10 +17,12 @@ export class SidebarComponent implements OnInit {
     return this.gifService.getHistorial;
   }
 
-  //@ViewChild('itemHistorial') itemHistorial!: ElementRef<HTMLInputElement>;
+  @ViewChild('btnClose') btnClose!: ElementRef<HTMLInputElement>;
+
 
   buscarTerminoHistorial( itemHistorial:string ){
     console.log("Value: ", itemHistorial);
+    this.btnClose.nativeElement.click();
     this.gifService.buscarGifs(itemHistorial);
   }
 }

@@ -22,7 +22,19 @@ img {
   display: block;
 }
 
+@media only screen and (min-width:500px) {
+  .grid-container{
+    column-count: 5;
+    column-gap: 10px;
+  }
+}
 
+@media only screen and (max-width:800px) {
+  .grid-container{
+    column-count: 2;
+    column-gap: 10px;
+  }
+}
 
 
 /* .grid-container{
